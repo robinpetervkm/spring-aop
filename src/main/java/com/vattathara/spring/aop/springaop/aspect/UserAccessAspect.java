@@ -11,7 +11,7 @@ import org.aspectj.lang.annotation.Before;
 //Configuration
 @Aspect
 @Configuration
-public class BeforeAspect {
+public class UserAccessAspect {
 	
 	private Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 	
@@ -20,7 +20,8 @@ public class BeforeAspect {
 	
 	@Before("execution(* com.vattathara.spring.aop.springaop.business.*.*(..))")
 	public void before(JoinPoint joinPoint) {
-		LOGGER.info("Interceped Method calls {}",joinPoint);
+		LOGGER.info("Check for user access");
+		LOGGER.info("Allowing access for {}",joinPoint);
 	}
 
 }
