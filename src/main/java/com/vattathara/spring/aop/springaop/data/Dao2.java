@@ -1,4 +1,4 @@
-package com.vattathara.spring.aop.springaop;
+package com.vattathara.spring.aop.springaop.data;
 
 import org.springframework.stereotype.Repository;
 

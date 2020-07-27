@@ -1,17 +1,19 @@
-package com.vattathara.spring.aop.springaop;
+package com.vattathara.spring.aop.springaop.business;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.vattathara.spring.aop.springaop.data.Dao1;
+
 @Service
-public class Business2 {
+public class Business1 {
 
 	@Autowired
-	private Dao2 dao2;
+	private Dao1 dao1;
 
 	public String calculateSomething() {
 		//Busness Logic
-		return dao2.retriveSomething();
+		return dao1.retriveSomething();
 	}
 
 }
