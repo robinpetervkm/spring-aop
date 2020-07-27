@@ -12,7 +12,7 @@ public class Business2 {
 	private Dao2 dao2;
 
 	public String calculateSomething() {
-		//Busness Logic
+		//Business Logic
 		return dao2.retriveSomething();
 	}
 

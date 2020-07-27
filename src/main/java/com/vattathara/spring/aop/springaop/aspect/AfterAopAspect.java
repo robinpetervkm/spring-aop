@@ -13,11 +13,14 @@ import org.aspectj.lang.annotation.Aspect;
 @Configuration
 
 public class AfterAopAspect {
+
 	private Logger LOGGER = LoggerFactory.getLogger(this.getClass());
+
 	@AfterReturning(value = 
 			"execution(* com.vattathara.spring.aop.springaop.business.*.*(..))",
 			returning = "result"
 			) // PointCut
+
 	public void afterReturning(JoinPoint joinPoint,Object result) {
 		LOGGER.info("{} returned with value {}", joinPoint,result);
 	}
@@ -28,9 +31,11 @@ public class AfterAopAspect {
 	}
 	@AfterThrowing(value = 
 			"execution(* com.vattathara.spring.aop.springaop.business.*.*(..))",
-			throwing = "Exception"
+			throwing = "exception"
 			) // PointCut
+	
 	public void afterThrowing(JoinPoint joinPoint,Exception exception) {
 		LOGGER.info("{} throw exception {}", joinPoint,exception);
 	}
+
 }
