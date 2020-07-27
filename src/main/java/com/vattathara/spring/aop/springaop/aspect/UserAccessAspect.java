@@ -18,7 +18,7 @@ public class UserAccessAspect {
 	//What kind of method calls i would like to intercept
 	//execution(* PACKAGE.*.*(..))
 	
-	@Before("execution(* com.vattathara.spring.aop.springaop.business.*.*(..))")
+	@Before("execution(* com.vattathara.spring.aop.springaop..*.*(..))")
 	public void before(JoinPoint joinPoint) {
 		LOGGER.info("Check for user access");
 		LOGGER.info("Allowing access for {}",joinPoint);
