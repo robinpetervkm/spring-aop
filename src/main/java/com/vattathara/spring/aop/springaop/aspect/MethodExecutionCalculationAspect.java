@@ -12,7 +12,7 @@ import org.aspectj.lang.annotation.Aspect;
 public class MethodExecutionCalculationAspect {
 	private Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 	
-	@Around("execution(* com.vattathara.spring.aop.springaop.business.*.*(..))") // PointCut
+	@Around("com.vattathara.spring.aop.springaop.aspect.CommonJoinPointConfig.businessLayerExecution()") // PointCut
 	public void around(ProceedingJoinPoint pJoinPoint) throws Throwable {
 		long startTime = System.currentTimeMillis();
 		pJoinPoint.proceed();

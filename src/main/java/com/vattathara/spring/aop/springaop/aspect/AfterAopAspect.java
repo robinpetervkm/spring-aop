@@ -17,20 +17,20 @@ public class AfterAopAspect {
 	private Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
 	@AfterReturning(value = 
-			"execution(* com.vattathara.spring.aop.springaop.business.*.*(..))",
+			"com.vattathara.spring.aop.springaop.aspect.CommonJoinPointConfig.businessLayerExecution()",
 			returning = "result"
 			) // PointCut
 
 	public void afterReturning(JoinPoint joinPoint,Object result) {
 		LOGGER.info("{} returned with value {}", joinPoint,result);
 	}
-	@After("execution(* com.vattathara.spring.aop.springaop.business.*.*(..))")
+	@After("com.vattathara.spring.aop.springaop.aspect.CommonJoinPointConfig.businessLayerExecution()")
 	
 	public void after(JoinPoint joinPoint) {
 		LOGGER.info("after executing {}", joinPoint);
 	}
 	@AfterThrowing(value = 
-			"execution(* com.vattathara.spring.aop.springaop.business.*.*(..))",
+			"com.vattathara.spring.aop.springaop.aspect.CommonJoinPointConfig.businessLayerExecution()",
 			throwing = "exception"
 			) // PointCut
 	

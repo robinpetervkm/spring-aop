@@ -16,7 +16,7 @@ public class UserAccessAspect {
 	//What kind of method calls i would like to intercept
 	//execution(* PACKAGE.*.*(..))
 	
-	@Before("execution(* com.vattathara.spring.aop.springaop.data.*.*(..))")//PointCut
+	@Before("com.vattathara.spring.aop.springaop.aspect.CommonJoinPointConfig.dataLayerExecution()")//PointCut
 	
 	//process of ensuring the right time call of execution statement is call WEAVING weaving
 	
